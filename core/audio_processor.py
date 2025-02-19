@@ -1,7 +1,8 @@
 import whisper
 import speech_recognition as sr
 from pydub import AudioSegment
-import imageio_ffmpeg as ffmpeg
+# import imageio_ffmpeg as ffmpeg
+import ffmpeg
 from pathlib import Path
 from utils.logger import logger
 from core.exceptions import AudioTranscriptionError
