@@ -10,12 +10,22 @@ from config.settings import WHISPER_MODEL_SIZE
 import pydub
 import shutil
 
+class WhisperModelSingleton:
+    _instance = None
+
+    @classmethod
+    def get_model(cls):
+        if cls._instance is None:
+            cls._instance = whisper.load_model(WHISPER_MODEL_SIZE)
+        return cls._instance
+
 class AudioProcessor:
     def __init__(self):
         """Initialize AudioProcessor with necessary configurations."""
         # AudioSegment.converter = ffmpeg.get_ffmpeg_exe()
-        shutil.rmtree("~/.cache/whisper", ignore_errors=True)
-        self.model = whisper.load_model(WHISPER_MODEL_SIZE, download_root="~/.cache/whisper")
+        # shutil.rmtree("~/.cache/whisper", ignore_errors=True)
+        # self.model = whisper.load_model(WHISPER_MODEL_SIZE, download_root="~/.cache/whisper")
+        self.model = WhisperModelSingleton.get_model()
         self.recognizer = sr.Recognizer()
 
     def transcribe_audio(self, audio_path: str, language_code: str = 'en-US') -> str:
