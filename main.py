@@ -1,6 +1,6 @@
 import streamlit as st
 from ui.streamlit_app import StreamlitUI
-from utils.logger import logger
+# from utils.logger import logger
 import torch
 
 torch.classes.__path__ = []
