@@ -4,7 +4,7 @@
 
 - Automatic Speech Recognition (ASR) is a system that converts spoken language into text using machine learning models. This project implements ASR using state-of-the-art deep learning techniques.
 
-## 🚀 Features
+## 🚀 Features:
 
 - Converts speech to text with high accuracy
 
