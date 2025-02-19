@@ -12,7 +12,7 @@ def main():
         app.render()
     except Exception as e:
         st.error(f"The application encountered an error: {str(e)}")
-        logger.error(f"Application error: {e}")
+        # logger.error(f"Application error: {e}")
 
 if __name__ == "__main__":
     main()
