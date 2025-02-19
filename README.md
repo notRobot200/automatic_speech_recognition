@@ -16,13 +16,13 @@
 
 ## 📚 Model Used:
 
-- This project leverages Whisper by OpenAI, a powerful ASR model known for its robustness across various languages and accents.
+This project leverages Whisper by OpenAI, a powerful ASR model known for its robustness across various languages and accents.
 
 ## 📝 License:
 
-- This project is licensed under the MIT License.
+This project is licensed under the MIT License.
 
 ## 📬 Contact:
 
-- For any inquiries, reach out to:
+For any inquiries, reach out to:
 📧 Email: mhmmdadammajid@gmail.com
