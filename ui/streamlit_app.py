@@ -7,7 +7,7 @@ from typing import Optional
 from core.audio_processor import AudioProcessor
 from core.exceptions import AudioTranscriptionError
 from config.settings import SUPPORTED_FORMATS, SUPPORTED_LANGUAGES
-from utils.logger import logger
+# from utils.logger import logger
 
 
 class StreamlitUI:
@@ -58,10 +58,10 @@ class StreamlitUI:
         except AudioTranscriptionError as e:
             st.error(str(e))
             return None
-        except Exception as e:
-            st.error(f"Unexpected error: {str(e)}")
-            logger.error(f"Unexpected error: {e}")
-            return None
+        # except Exception as e:
+        #     st.error(f"Unexpected error: {str(e)}")
+        #     logger.error(f"Unexpected error: {e}")
+        #     return None
         finally:
             if temp_file_path and os.path.exists(temp_file_path):
                 os.remove(temp_file_path)
@@ -109,7 +109,7 @@ class StreamlitUI:
 
         except Exception as e:
             st.error(f"🚫 Microphone error: {str(e)}")
-            logger.error(f"Microphone error: {e}")
+            # logger.error(f"Microphone error: {e}")
 
     def render(self):
         """Render the main UI and handle user interactions."""
@@ -213,4 +213,4 @@ class StreamlitUI:
 
         except Exception as e:
             st.error(f"Error creating download button: {str(e)}")
-            logger.error(f"Download button error: {e}")
+            # logger.error(f"Download button error: {e}")
