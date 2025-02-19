@@ -8,6 +8,7 @@ from pathlib import Path
 from core.exceptions import AudioTranscriptionError
 from config.settings import WHISPER_MODEL_SIZE
 import pydub
+import shutil
 
 class AudioProcessor:
     def __init__(self):
