@@ -12,7 +12,7 @@ Automatic Speech Recognition (ASR) is a system that converts spoken language int
 
 - Uses pre-trained deep learning models for transcription
 
-- Works on multi-language 
+- Supports multiple languages 
 
 ## 📚 Model Used:
 
