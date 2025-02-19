@@ -13,7 +13,8 @@ class AudioProcessor:
     def __init__(self):
         """Initialize AudioProcessor with necessary configurations."""
         # AudioSegment.converter = ffmpeg.get_ffmpeg_exe()
-        self.model = whisper.load_model(WHISPER_MODEL_SIZE, force_reload=True)
+        shutil.rmtree("~/.cache/whisper", ignore_errors=True)
+        self.model = whisper.load_model(WHISPER_MODEL_SIZE, download_root="~/.cache/whisper")
         self.recognizer = sr.Recognizer()
 
     def transcribe_audio(self, audio_path: str, language_code: str = 'en-US') -> str:
