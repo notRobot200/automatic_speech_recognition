@@ -7,11 +7,12 @@ from pathlib import Path
 # from utils.logger import logger
 from core.exceptions import AudioTranscriptionError
 from config.settings import WHISPER_MODEL_SIZE
+import pydub
 
 class AudioProcessor:
     def __init__(self):
         """Initialize AudioProcessor with necessary configurations."""
-        AudioSegment.converter = ffmpeg.get_ffmpeg_exe()
+        # AudioSegment.converter = ffmpeg.get_ffmpeg_exe()
         self.model = whisper.load_model(WHISPER_MODEL_SIZE)
         self.recognizer = sr.Recognizer()
 
