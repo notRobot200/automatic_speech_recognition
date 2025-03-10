@@ -18,6 +18,10 @@ Automatic Speech Recognition (ASR) is a system that converts spoken language int
 
 This project leverages Whisper by OpenAI, a powerful ASR model known for its robustness across various languages and accents.
 
+## 🔧 Deployment:
+
+This application is deployed on Streamlit, a Python-based framework for building interactive web applications.
+
 ## 📝 License:
 
 This project is licensed under the MIT License.
