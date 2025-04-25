@@ -3,7 +3,7 @@ from ui.streamlit_app import StreamlitUI
 # from utils.logger import logger
 import torch
 
-# torch.classes.__path__ = []
+torch.classes.__path__ = []
 
 def main():
     """Main entry point of the application."""
